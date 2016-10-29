@@ -31,13 +31,15 @@
         android:layout_below="@+id/nickNameText"
         android:layout_height="192dp"
         android:layout_marginTop="25dp"
-        android:layout_marginLeft="45dp"
+        android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:columnWidth="60dp"
         android:numColumns="3"
         android:horizontalSpacing="30dp"
         android:verticalSpacing="15dp"
-        android:stretchMode="columnWidth"
+        android:stretchMode="spacingWidth"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
         android:scrollbars="none">
     </GridView>
 
