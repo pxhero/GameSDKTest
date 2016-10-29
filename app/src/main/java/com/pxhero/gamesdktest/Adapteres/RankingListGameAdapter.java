@@ -55,6 +55,7 @@ public class RankingListGameAdapter extends ArrayAdapter<RankingListGameItem>{
         ranklistViewHolder.mGameDesTextView.setText(rankingListGameItem.getmGameInfo().getGameDescription());
         ranklistViewHolder.mDownLoadBtn.setOnClickListener(rankingListGameItem.getmBtnClickListener());
 
+
         return  view;
     }
 

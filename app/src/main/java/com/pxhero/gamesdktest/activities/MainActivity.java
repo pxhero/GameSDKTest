@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(MainActivity.this,"开始下载"+gameInfo.getGameName(),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"开始下载"+gameInfo.getGameName()+"...",Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
     //生成新游力荐的list
     private void InitRecGameInfoList() {
         for(int i=0; i<10;i++) {
-            GameInfo gameInfo1 = new GameInfo(R.drawable.flower_game,"诛仙","说志","角色扮演/23M",1);
+            GameInfo gameInfo1 = new GameInfo(R.drawable.nice_game,"诛仙","说志","角色扮演/23M",1);
             gameInfo1.setGameId(i+1);
             gameInfo1.setGameName(gameInfo1.getGameName()+ gameInfo1.getGameId());
             mNewGameRecItemList.add(gameInfo1);
