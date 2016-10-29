@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/avatarImage"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/avatar"
+        android:scaleType="centerCrop"/>
+    
+    <TextView
+        android:id="@+id/nickNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#111111"
+        android:layout_marginTop="10dp"
+        android:text="望尘莫及"
+        android:layout_below="@+id/avatarImage"
+        android:layout_centerInParent="true"/>
+
+    <GridView
+        android:id="@+id/navigateGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/nickNameText"
+        android:columnWidth="60dp"
+        android:numColumns="3"
+        android:horizontalSpacing="30dp"
+        android:verticalSpacing="15dp"
+        android:stretchMode="columnWidth"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="visible">
+    </GridView>
+    
+    <View
+        android:id="@+id/spinLine"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/navigateGridView"
+        android:layout_marginTop="15dp"
+        android:background="#f5f5f5"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/spinLine"
+        android:layout_marginTop="15dp"
+        android:visibility="visible"
+        android:id="@+id/latest_activity_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最新活动"
+                android:textSize="17sp"
+                android:textColor="#111111"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/moreActivitiesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:textSize="15sp"
+                android:text="更多"
+                android:textColor="@drawable/linktext_selector"
+                android:clickable="true"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/latest_activity_gameImage_1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/angry_birds"
+                android:scaleType="centerCrop"
+                android:background="#FF0" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/latest_activity_firstLineText_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#111111"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="《愤怒的小鸟》 新服开测活动"/>
+
+                <TextView
+                    android:id="@+id/latest_activity_secondLineText_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#888888"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="实物大奖等着你！礼包多到你手软~"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/latest_activity_watchBtn_1"
+                android:layout_width="60dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="20dp"
+                android:text="查看"
+                android:textSize="13sp"
+                android:textColor="#FFF"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/new_game_watch_button"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/latest_activity_gameImage_2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/temple_run"
+                android:scaleType="centerCrop"
+                android:background="#FF0" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/latest_activity_firstLineText_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#111111"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="《神庙逃亡》 新服开测活动"/>
+
+                <TextView
+                    android:id="@+id/latest_activity_secondLineText_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#888888"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="实物大奖等着你！礼包多到你手软~"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/latest_activity_watchBtn_2"
+                android:layout_width="60dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="20dp"
+                android:text="查看"
+                android:textSize="13sp"
+                android:textColor="#FFF"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/new_game_watch_button"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dddddd"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/latest_activity_gameImage_3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/fish_game"
+                android:scaleType="centerCrop"
+                android:background="#FF0" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/latest_activity_firstLineText_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#111111"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="《捕鱼达人》 新服开测活动"/>
+
+                <TextView
+                    android:id="@+id/latest_activity_secondLineText_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#888888"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="实物大奖等着你！礼包多到你手软~"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/latest_activity_watchBtn_3"
+                android:layout_width="60dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="20dp"
+                android:text="查看"
+                android:textSize="13sp"
+                android:textColor="#FFF"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/new_game_watch_button"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/spinLine2"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#f5f5f5"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/newGameRecommendText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新游力荐"
+        android:textSize="17sp"
+        android:textColor="#111111"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/latest_activity_layout"/>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScollRec"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/newGameRecommendText"
+        android:scrollbars="none"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp">
+        
+        <LinearLayout
+            android:id="@+id/newGameScroll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/spinLine3"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/horizontalScollRec"
+        android:layout_marginTop="15dp"
+        android:background="#f5f5f5"/>
+
+    <TextView
+        android:id="@+id/rankingListText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="飙升榜"
+        android:textSize="17sp"
+        android:textColor="#111111"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/spinLine3"/>
+
+</RelativeLayout>
