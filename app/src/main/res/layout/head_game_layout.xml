@@ -24,23 +24,23 @@
         android:layout_below="@+id/avatarImage"
         android:layout_centerInParent="true"/>
 
+
     <GridView
         android:id="@+id/navigateGridView"
         android:layout_width="match_parent"
+        android:layout_below="@+id/nickNameText"
         android:layout_height="192dp"
+        android:layout_marginTop="25dp"
         android:layout_marginLeft="45dp"
         android:layout_marginRight="35dp"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/nickNameText"
         android:columnWidth="60dp"
         android:numColumns="3"
         android:horizontalSpacing="30dp"
         android:verticalSpacing="15dp"
         android:stretchMode="columnWidth"
-        android:layout_centerInParent="true"
-        android:gravity="center"
         android:scrollbars="none">
     </GridView>
+
     
     <View
         android:id="@+id/spinLine"

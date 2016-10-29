@@ -3,9 +3,11 @@ package com.pxhero.gamesdktest.activities;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         //初始化游戏飙升榜listview
         mRankingGameListView = (ListView)findViewById(R.id.rankingGameListView);
         initRankingItemList();
@@ -48,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
         initListHeadView();
         mRankingGameListView.setAdapter(rankingListGameAdapter);
         mRankingGameListView.setVerticalScrollBarEnabled(false);
+
+        //设置mRankingGameListView的高度，使其刚好能显示4个item
+        ListAdapter listAdapter = mRankingGameListView.getAdapter();
+        if(listAdapter == null)
+            return;
     }
 
     private  void initListHeadView() {
@@ -64,8 +74,9 @@ public class MainActivity extends AppCompatActivity {
         InitRecGameInfoList();
         InitRecGameScrollView();
 
-
         mRankingGameListView.addHeaderView(headview);
+
+
     }
 
     private void initRankingItemList() {
@@ -154,11 +165,14 @@ public class MainActivity extends AppCompatActivity {
 
         NavigateItemInfo navigateItemInfo3 = new NavigateItemInfo(R.drawable.customer_service_center,
                 NavigateItemInfo.NavigateItemType.CUSTOMER_SERVICE_CENTER);
-        NavigateItemInfo navigateItemInfo4 = new NavigateItemInfo(R.drawable.activity_hall,
+
+        NavigateItemInfo navigateItemInfo4 = new NavigateItemInfo(R.drawable.activity_hall_2,
                 NavigateItemInfo.NavigateItemType.ACTIVITY_HALL);
-        NavigateItemInfo navigateItemInfo5 = new NavigateItemInfo(R.drawable.intelligence_station,
+
+
+        NavigateItemInfo navigateItemInfo5 = new NavigateItemInfo(R.drawable.intelligence_station_2,
                 NavigateItemInfo.NavigateItemType.INTELLIGENCE_STATION);
-        NavigateItemInfo navigateItemInfo6 = new NavigateItemInfo(R.drawable.new_game_recommend,
+        NavigateItemInfo navigateItemInfo6 = new NavigateItemInfo(R.drawable.new_game_recommend_2,
                 NavigateItemInfo.NavigateItemType.NEW_GAME_RECOMMENDED);
 
         navigateItemList.add(navigateItemInfo1);
