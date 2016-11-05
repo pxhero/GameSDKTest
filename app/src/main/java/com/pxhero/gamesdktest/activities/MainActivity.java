@@ -1,5 +1,6 @@
 package com.pxhero.gamesdktest.activities;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -50,14 +51,33 @@ public class MainActivity extends AppCompatActivity {
         initRankingItemList();
         RankingListGameAdapter rankingListGameAdapter = new RankingListGameAdapter(this,R.layout.ranking_list_game_item,mRankingItemList);
 
+
         initListHeadView();
+        initListFooterView();
+
         mRankingGameListView.setAdapter(rankingListGameAdapter);
         mRankingGameListView.setVerticalScrollBarEnabled(false);
 
-        //设置mRankingGameListView的高度，使其刚好能显示4个item
-        ListAdapter listAdapter = mRankingGameListView.getAdapter();
-        if(listAdapter == null)
-            return;
+
+    }
+
+    private void initListFooterView() {
+
+        View footerView = getLayoutInflater().inflate(R.layout.tail_game_layout,null);
+
+        TextView moreText = (TextView)footerView.findViewById(R.id.moreGameTextView);
+        ImageView imageView = (ImageView)footerView.findViewById(R.id.moreGameIconDownImageVIew);
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "敬請期待", Toast.LENGTH_SHORT).show();
+            }
+        };
+        moreText.setOnClickListener(listener);
+        imageView.setOnClickListener(listener);
+
+        mRankingGameListView.addFooterView(footerView);
     }
 
     private  void initListHeadView() {

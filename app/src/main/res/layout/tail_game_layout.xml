@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:id="@+id/moreGameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击更多游戏 "
+            android:textSize="13sp"
+            android:textColor="@drawable/more_text_selector"
+            android:clickable="true"/>
+
+        <ImageView
+            android:id="@+id/moreGameIconDownImageVIew"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/more_game_down_btn"
+            android:clickable="true"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/sogou_game_sdk_game_logo"
+        android:id="@+id/imageView" />
 
 </LinearLayout>
